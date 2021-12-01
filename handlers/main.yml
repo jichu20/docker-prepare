@@ -1,0 +1,6 @@
+# Recarga de la configuración de del demonio de docker
+- name: restart docker service
+  systemd:
+    state: restarted
+    daemon_reload: yes
+    name: reload

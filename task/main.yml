@@ -1,0 +1,7 @@
+# despliegue de configuración de docker 
+- name: deploy docker config
+  template:
+    src: docker.service.j2
+    dest: "/lib/systemd/system/docker.service"
+    mode: 0755
+  notify: restart docker service
